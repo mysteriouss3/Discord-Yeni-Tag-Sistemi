@@ -11,7 +11,7 @@ const client = global.client = new Client({
     partials:Object.keys(Partials)
 });
 
-client.on('ready', (client) => {
+client.on(Events.ClientReady, (client) => {
     console.log(`Logged in on ${client.user.tag} (${client.user.id}) on version ${version}`);
 });
 
