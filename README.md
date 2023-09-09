@@ -4,7 +4,12 @@ Discord username güncellemesinden sonra basic yeni tag sistemi
 
 ```js
 const { Client,Events, version, GatewayIntentBits } = require("discord.js")
-const client = global.client = new Client({fetchAllMembers:true,intents:Object.keys(GatewayIntentBits),partials:Object.keys(Partials)});
+
+const client = global.client = new Client({
+    fetchAllMembers:true,
+    intents:Object.keys(GatewayIntentBits),
+    partials:Object.keys(Partials)
+});
 
 client.on('ready', (client) => {
     console.log(`Logged in on ${client.user.tag} (${client.user.id}) on version ${version}`);
