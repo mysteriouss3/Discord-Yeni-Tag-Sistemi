@@ -26,10 +26,10 @@ client.on(Events.UserUpdate, async(oldMember , newMember) =>{
 
    if (client.users.cache.get(newMember.id).displayName.includes("sembol")) {
         member.roles.add("rol_id");
-        client.channels.cache.find(x => x.name === "..._log").send(`${member} kullanıcısı (**+**) sembolünü aldı`);
+        client.channels.cache.find(x => x.name === "..._log").send(`${member} kullanıcısı (**+**) tagını aldı`);
     } else if (!client.users.cache.get(oldMember.id).displayName.includes("sembol")) {
         member.roles.remove("rol_id");
-        client.channels.cache.find(x => x.name === "tag_log").send(`${member} kullanıcısı (**+**) sembolünü çıkardı`);
+        client.channels.cache.find(x => x.name === ".._log").send(`${member} kullanıcısı (**+**) tagını çıkardı`);
     } 
     
 })
